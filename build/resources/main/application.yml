@@ -1,0 +1,26 @@
+
+server:
+    port: 8890
+    sessionTimeout: 15
+    tomcat:
+        max-threads: 800
+        uri-encoding: UTF-8
+
+spring:
+    application:
+        name:   sayHelloServer
+
+#为true时，可以启动，但报异常：Cannot execute request on any known server
+eureka:
+    client:
+        fetchRegistry:  false
+ # 指定服务注册中心的地址
+        serviceUrl:
+            defaultZone:    http://root:angus@localhost:8001/eureka/
+
+
+author:
+    name:   森林三人组
+current:
+    env:    test
+    version:    1.0.RELEASE
